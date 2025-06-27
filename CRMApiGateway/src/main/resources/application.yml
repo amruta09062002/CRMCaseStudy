@@ -1,0 +1,52 @@
+server:
+  port: 8004
+ 
+eureka:
+   client:
+     register-with-eureka: true
+     fetch-registry: true  
+ 
+springdoc:
+  api-docs:
+   path: /v3/api-docs
+ 
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+ 
+spring:
+  application:
+    name: CRMApiGateway
+  cloud:
+    gateway:
+      routes[0]:
+        id: CustomerService   
+        uri: http://localhost:8002
+        predicates[0]: Path=/customer/**
+        filters[0]:
+          name: CircuitBreaker
+          args:
+            name: customerservice-cb
+            fallbackUri : forward:/fallback
+ 
+      routes[1]:
+        id: MarketingService   
+        uri: http://localhost:8003
+        predicates[0]: Path=/marketing/**
+        filters[0]:
+          name: CircuitBreaker
+          args:
+            name: marketingservice-cb
+            fallbackUri : forward:/fallback
+ 
+      routes[2]:
+          id: AuthenticationService   
+          uri: http://localhost:8001
+          predicates[0]: Path=/auth/**
+          filters[0]:
+            name: CircuitBreaker
+            args:
+              name: authenticationservice-cb
+              fallbackUri : forward:/fallback
