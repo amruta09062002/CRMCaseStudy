@@ -1,0 +1,89 @@
+/* Container styling */
+.sales-dashboard {
+  background: linear-gradient(to right, #f0f4f8, #ffffff);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Headings */
+.sales-dashboard h2 {
+  color: #2c3e50;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.sales-dashboard h3 {
+  color: #34495e;
+  margin-top: 1rem;
+}
+
+/* Buttons */
+.sales-dashboard .btn {
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.sales-dashboard .btn-primary {
+  background-color: #007bff;
+  border: none;
+}
+
+.sales-dashboard .btn-info {
+  background-color: #17a2b8;
+  border: none;
+}
+
+.sales-dashboard .btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Table styling */
+.sales-dashboard table {
+  background-color: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.sales-dashboard th {
+  background-color: #343a40;
+  color: #ffffff;
+  text-align: center;
+}
+
+.sales-dashboard td {
+  text-align: center;
+  vertical-align: middle;
+}
+
+/* Input group */
+.sales-dashboard .input-group {
+  max-width: 500px;
+  margin-top: 1rem;
+}
+
+.sales-dashboard input.form-control {
+  border-radius: 0.375rem 0 0 0.375rem;
+}
+
+/* Alert message */
+.sales-dashboard .alert {
+  margin-top: 1rem;
+  font-weight: 500;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .sales-dashboard .input-group {
+    flex-direction: column;
+  }
+
+  .sales-dashboard .input-group input,
+  .sales-dashboard .input-group button {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+}

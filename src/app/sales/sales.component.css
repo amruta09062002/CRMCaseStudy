@@ -1,0 +1,56 @@
+/* .sales-dashboard {
+  padding: 20px;
+}
+.sales-dashboard h2 {
+  margin-bottom: 20px;
+}
+.sales-dashboard label {
+  display: block;
+  margin-bottom: 10px;
+}
+.sales-dashboard input {
+  margin-bottom: 10px;
+}
+.sales-dashboard button {
+  margin-right: 10px;
+}
+.sales-dashboard ul {
+  list-style-type: none;
+  padding: 0;
+}
+.sales-dashboard li {
+  margin-bottom: 10px;
+} */
+
+
+
+.sales-dashboard {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.sales-dashboard h2, h3 {
+  margin-top: 20px;
+}
+
+.sales-dashboard input {
+  margin: 5px 0;
+  padding: 5px;
+}
+
+.sales-dashboard button {
+  margin: 5px 10px 10px 0;
+  padding: 5px 10px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: left;
+}
